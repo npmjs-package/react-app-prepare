@@ -1,0 +1,40 @@
+{
+  "name": "react-app-prepare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "react-app-prepare": "bin/react-app-prepare",
+    "@patel-prince/react-app-prepare": "bin/react-app-prepare"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npmjs-package/react-app-prepare.git"
+  },
+  "keywords": [
+    "react",
+    "react-app",
+    "react-app-prepare",
+    "@patel-prince/react-app-prepare",
+    "patel-prince"
+  ],
+  "author": "patel-prince",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/npmjs-package/react-app-prepare/issues"
+  },
+  "homepage": "https://github.com/npmjs-package/react-app-prepare#readme",
+  "dependencies": {
+    "arg": "^5.0.1",
+    "chalk": "^4.1.2",
+    "esm": "^3.2.25",
+    "inquirer": "^8.2.2",
+    "validate-npm-package-name": "^3.0.0"
+  }
+}
