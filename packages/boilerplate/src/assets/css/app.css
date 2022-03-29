@@ -1,0 +1,62 @@
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.app-header {
+	background-color: rgb(10, 23, 36);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+}
+
+.logo {
+	max-width: 80%;
+	width: 500px;
+	animation: rotate 8s linear infinite;
+}
+
+.app-title {
+	font-size: 40px;
+	margin: 0px;
+	color: rgb(74, 151, 223);
+	font-weight: normal;
+}
+
+.app-count {
+	font-size: 60px;
+	margin: 0px;
+	color: rgb(74, 151, 223);
+	font-weight: normal;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-top: 20px;
+}
+
+.buttons button {
+	font-size: 16px;
+	background-color: rgb(74, 151, 223);
+	border: 0;
+	outline: 0;
+	padding: 7px 15px;
+	letter-spacing: 1px;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.buttons button:hover {
+	background-color: rgb(40, 135, 224);
+}

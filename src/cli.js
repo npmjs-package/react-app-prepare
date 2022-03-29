@@ -2,11 +2,6 @@ import arg from "arg";
 import { createProject } from "./main";
 import { promptForMissingOptions } from "./questions";
 
-export const templates = ["Javascript", "Typescript"];
-export const defaultTemplate = "Javascript";
-export const tools = ["None", "Redux", "Mobx"];
-export const defaultTool = "None";
-
 function parseArgumentsIntoOptions(rowArgs) {
 	const args = arg(
 		{

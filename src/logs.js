@@ -34,3 +34,7 @@ export function invalidToolSelected(toolName) {
 		`You can select ${chalk.green(`"none"`)} if you don't want to use any state management tool.`,
 	);
 }
+
+export function directoryNotEmpty(projectName) {
+	console.log("%s %s Directory is not empty", chalk.red("ERROR"), chalk.green(`"${projectName}"`));
+}

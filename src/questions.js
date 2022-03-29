@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import { defaultTemplate, defaultTool, templates, tools } from "./cli";
+import { defaultTemplate, defaultTool, templates, tools } from "./data";
 
 export async function promptForMissingOptions(options) {
 	const questions = [];
