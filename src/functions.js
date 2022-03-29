@@ -1,12 +1,25 @@
 import path from "path";
 import fs from "fs";
 import { dependencies, dependencyList, devDependencies, packageJson } from "./data";
+import { ncp } from "ncp";
+import { promisify } from "util";
+
+const copy = promisify(ncp);
+
+export async function copyTemplateFiles(options) {
+	await copy(options.boilerplateDirectory, options.targetDirectory, {
+		clobber: false,
+	});
+	await copy(options.templateDirectory, options.targetDirectory, {
+		clobber: false,
+	});
+}
 
 async function generateDirectoryPath(options) {
 	return {
 		targetDirectory: path.join(process.cwd(), options.projectName),
 		boilerplateDirectory: path.resolve(__dirname, "../packages/boilerplate"),
-		templateDirectory: path.resolve(__dirname, "../packages/templates"),
+		templateDirectory: path.resolve(__dirname, "../packages/templates", options.template),
 		toolsDirectory: path.resolve(__dirname, "../packages/tools"),
 	};
 }
