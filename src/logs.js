@@ -38,3 +38,13 @@ export function invalidToolSelected(toolName) {
 export function directoryNotEmpty(projectName) {
 	console.log("%s %s Directory is not empty", chalk.red("ERROR"), chalk.green(`"${projectName}"`));
 }
+
+export function successLog(projectName) {
+	console.log(
+		"\n%s Your project is ready. Run below commands to run the app.\n",
+		chalk.green("DONE"),
+	);
+	console.log(chalk.blue(`     cd ${projectName}`));
+	console.log(chalk.blue("     npm install"));
+	console.log(chalk.blue("     npm start"));
+}
