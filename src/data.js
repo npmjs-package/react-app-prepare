@@ -1,6 +1,6 @@
 export const templates = ["Javascript", "Typescript"];
 export const defaultTemplate = "Javascript";
-export const tools = ["None", "Redux", "Mobx"];
+export const tools = ["None", "Redux" /*, "Mobx"*/];
 export const defaultTool = "None";
 export const packageJson = {
 	name: "my-react-app",
@@ -24,6 +24,7 @@ export const packageJson = {
 	},
 };
 export const dependencies = {
+	"@reduxjs/toolkit": "^1.8.0",
 	"@testing-library/jest-dom": "^5.16.3",
 	"@testing-library/react": "^12.1.4",
 	"@testing-library/user-event": "^14.0.0",
@@ -33,14 +34,15 @@ export const dependencies = {
 	"@types/react-dom": "^17.0.14",
 	react: "^17.0.2",
 	"react-dom": "^17.0.2",
+	"react-redux": "^7.2.6",
 	"react-scripts": "^5.0.0",
-	typescript: "^4.6.3",
 };
 export const devDependencies = {
 	"@typescript-eslint/eslint-plugin": "^5.17.0",
 	"@typescript-eslint/parser": "^5.17.0",
 	eslint: "^8.12.0",
 	"eslint-plugin-react": "^7.29.4",
+	typescript: "^4.6.3",
 };
 
 const defaultDependencies = [
@@ -55,6 +57,7 @@ const defaultDependencies = [
 ];
 
 export const dependencyList = {
+	none: [],
 	javascript: defaultDependencies,
 	typescript: [
 		...defaultDependencies,
@@ -66,4 +69,5 @@ export const dependencyList = {
 		"@typescript-eslint/eslint-plugin",
 		"@typescript-eslint/parser",
 	],
+	redux: ["@reduxjs/toolkit", "react-redux"],
 };
