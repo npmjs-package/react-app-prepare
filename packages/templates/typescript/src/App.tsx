@@ -22,7 +22,9 @@ const App: React.FC = () => {
 		<header className="app-header">
 			<img className="logo" src={logo} alt="logo" />
 			<h1 className="app-title">React Counter</h1>
-			<h1 className="app-count">{count}</h1>
+			<h1 className="app-count" role="count">
+				{count}
+			</h1>
 			<div className="buttons">
 				<button onClick={increment}>Increase</button>
 				<button onClick={decrement}>Decrease</button>

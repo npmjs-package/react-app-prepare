@@ -17,12 +17,14 @@ const App = () => {
 	const reset = () => {
 		setCount(0)
 	}
-	
+
 	return (
 		<header className="app-header">
 			<img className="logo" src={logo} alt="logo" />
 			<h1 className="app-title">React Counter</h1>
-			<h1 className="app-count">{count}</h1>
+			<h1 className="app-count" role="count">
+				{count}
+			</h1>
 			<div className="buttons">
 				<button onClick={increament}>Increase</button>
 				<button onClick={decreament}>Decrease</button>
