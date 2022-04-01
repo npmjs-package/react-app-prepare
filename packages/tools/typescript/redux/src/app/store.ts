@@ -3,8 +3,8 @@ import counterReducer from '../features/counter/counterSlice'
 
 export const store = configureStore({
 	reducer: {
-		counterSlice: counterReducer
-	}
+		counterSlice: counterReducer,
+	},
 })
 
 export type AppDispatch = typeof store.dispatch

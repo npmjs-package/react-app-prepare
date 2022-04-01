@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '../test-utils'
 import App from '../App'
 
 it('renders react counter', () => {
@@ -34,11 +34,15 @@ it('click increment button', () => {
 })
 
 it('click decrement button', () => {
-	render(<App />)
+	render(<App />, {
+		preloadedState: {
+			counterSlice: { count: 3 },
+		},
+	})
 	const decrementButton = screen.getByText(/^decrease$/i)
 	const count = screen.getByRole('count')
 	fireEvent.click(decrementButton)
-	expect(count.innerHTML).toBe('-1')
+	expect(count.innerHTML).toBe('2')
 })
 
 it('click increment by 5 button', () => {

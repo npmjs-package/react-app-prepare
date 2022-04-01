@@ -1,7 +1,7 @@
 import Counter from '../features/Counter'
 
 const AppContext = {
-	COUNTER: new Counter()
+	COUNTER: new Counter(),
 }
 
 const useAppSelector = () => AppContext
