@@ -1,6 +1,6 @@
 export const templates = ['Javascript', 'Typescript']
 export const defaultTemplate = 'Javascript'
-export const tools = ['None', 'Redux', 'Mobx']
+export const tools = ['None', 'Redux']
 export const defaultTool = 'None'
 export const packageJson = {
 	name: 'my-react-app',
@@ -32,8 +32,6 @@ export const dependencies = {
 	'@types/node': '^17.0.23',
 	'@types/react': '^17.0.43',
 	'@types/react-dom': '^17.0.14',
-	mobx: '^6.5.0',
-	'mobx-react': '^7.3.0',
 	react: '^17.0.2',
 	'react-dom': '^17.0.2',
 	'react-redux': '^7.2.6',
