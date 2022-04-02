@@ -25,11 +25,10 @@ export async function promptForMissingOptions(options) {
 
 	if (!options.tool) {
 		questions.push({
-			type: 'list',
+			type: 'confirm',
 			name: 'tool',
-			message: 'Which state management tool use want to use?',
-			choices: tools,
-			default: defaultTool,
+			message: 'Use redux for state management?',
+			default: true,
 		})
 	}
 
@@ -39,6 +38,6 @@ export async function promptForMissingOptions(options) {
 		...options,
 		projectName: options.projectName || answers.projectName,
 		template: options.template || answers.template,
-		tool: options.tool || answers.tool,
+		tool: options.tool || (answers.tool ? 'redux' : 'none'),
 	}
 }
